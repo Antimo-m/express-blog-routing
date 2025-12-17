@@ -1,10 +1,10 @@
 import express from "express"
-import Napoli from "./Napoli";
+import postRouter from "./routers/routes.js"
 
 const app = express()
 const port = 3000;
 
-
+app.use (`/posts`, postRouter)
 
 
 app.listen(port, () => {
