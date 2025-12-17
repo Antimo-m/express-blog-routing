@@ -27,11 +27,21 @@ router.get (`/:id`, (req, res) => {
 })
 //store
 
+router.post(`/`, (req,res) => {
+   res.send("post creato")
+})
 
 //update
+router.put(`/:id`, (req, res) => {
+    res.send("Post aggiornato")
+})
 
 //modify
-
+router.patch(`/:id`, (req, res) => {
+    res.send("Post modificato")
+})
 //destroy
-
+router.delete(`/:id`, (req, res) => {
+    res.send("Post cancellato")
+})
 export default router
