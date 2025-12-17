@@ -26,22 +26,24 @@ router.get (`/:id`, (req, res) => {
     }
 })
 //store
-
 router.post(`/`, (req,res) => {
    res.send("post creato")
 })
 
 //update
 router.put(`/:id`, (req, res) => {
-    res.send("Post aggiornato")
+    const id = req.params.id;
+    res.send(`il post con id ${id} è stato aggiornato!`)
 })
 
 //modify
 router.patch(`/:id`, (req, res) => {
-    res.send("Post modificato")
+    const id = req.params.id;
+    res.send(`il post con id ${id} è stato modificato!`)
 })
 //destroy
 router.delete(`/:id`, (req, res) => {
-    res.send("Post cancellato")
+    const id = req.params.id
+    res.send(`il post con id ${id} è stato cancellato!`)
 })
 export default router
